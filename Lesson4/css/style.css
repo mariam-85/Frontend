@@ -1,0 +1,17 @@
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    table-layout: fixed;
+    width: 350px;
+}
+td, th {
+    width: 100px;
+    overflow: scroll;
+}
+
+caption {
+    text-align: start;
+}

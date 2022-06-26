@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#p1 {
+    color: red;
+
+}
+
+.p2 {width: 400px;
+    background-color: aqua;
+}
+
+.bold {
+    font-weight: 1000;
+
+}
+
+.red {
+    color: rgb(237, 16, 90);
+
+}
+
+.p3 {
+    border: 1px dashed black;
+    font-size: 40px;
+    padding: 20px 50px 90px 120px;
+    margin: 100px;
+    
+}
+
+.bold:hover {
+    background-color: yellow;
+
+}

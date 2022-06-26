@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Project_example_2"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Lesson5Kino"
+	}
+}

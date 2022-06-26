@@ -1,0 +1,60 @@
+/*.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    top: 30px;
+    right: 60px;
+}*/
+
+.main {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: solid 1px black
+}
+
+.main1 {
+    top: 50%;
+    left: 50%;
+}
+
+.main2 {
+    top: 50%;
+    right: 50%;
+}
+
+.main3 {
+    bottom: 50%;
+    left: 50%;
+}
+
+.main4 {
+    bottom: 50%;
+    right: 50%;
+}
+
+.main5 {
+    top: 50%;
+    left: 50%;
+    transform: translate(100%, 100%);
+}
+
+.main6 {
+    top: 50%;
+    right: 50%;
+    transform: translate(-100%, 100%);
+}
+
+.main7 {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(100%, -100%);
+}
+
+.main8 {
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-100%, -100%);
+}

@@ -1,0 +1,51 @@
+body {
+    background-color: bisque;
+}
+
+
+h1 {
+    background-color: goldenrod;
+    text-align: center;
+    font-style:italic;
+}
+
+
+p {
+    text-decoration: underline;
+    margin: 10px;
+  font-weight: 600;
+  line-height: 60px;
+  
+}
+
+
+h2 {
+   margin: 30px;
+    text-align: center;
+    margin: 10px;
+    font-weight: 600;
+    line-height: 60px;
+    font-style: oblique;
+}
+
+.marginauto {
+    margin: 10px auto 20px;
+    display: block;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+table {
+    margin: 10px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+a {
+    color:chocolate;
+    text-decoration: none;
+}
