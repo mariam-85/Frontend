@@ -1,0 +1,12 @@
+textarea {
+resize: none;
+/*width: 600px;
+height: 400px;*/
+}
+
+.inputText:focus {
+outline: none;
+border-color: red;
+color: blue;
+background-color: purple;
+}
