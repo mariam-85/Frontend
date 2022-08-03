@@ -15,5 +15,15 @@ let long_string = "Lorem Ipsum is simply dummy text of the printing and typesett
 let index = long_string.length - 1;
 console.log(long_string[index]);
 
+let str = 'Hello, world!';
+// console.log(str.toLowerCase()); // приводит все символы к нижнему регистру
+// console.log(str.toUpperCase()); // приводит все символы к верхнему регистру
+
+str.length; // свойство (без скобок)
+str.toLowerCase(); // метод (скобки) - функция
+
+let str1 = '      Hello    ';
+console.log(str1.trim()); // обрезает лишние пробелы по бокам
+
 
 
