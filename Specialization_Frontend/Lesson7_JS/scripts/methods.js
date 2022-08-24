@@ -22,3 +22,5 @@ age.forEach(elem => age_arr.push(elem + 1));
 
 console.log(age_arr);
 
+
+
