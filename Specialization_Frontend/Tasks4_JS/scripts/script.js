@@ -108,12 +108,5 @@ read();
 const search = (substr) => words.filter(word => word.startsWith(substr));
 
 
-
-
-
-
-
-
-
 console.log(search('s'));
 
