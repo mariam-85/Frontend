@@ -19,3 +19,21 @@
     gap: 10px
 
 }
+
+.progress-container{
+    border: 1px solid black;
+    height: 20px;
+    position: relative;
+}
+
+.progress-line{
+    /* background-color: lightskyblue; */
+    height: 100%;
+    position: absolute;
+}
+
+.progress-value{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}

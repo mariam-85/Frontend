@@ -51,31 +51,61 @@ const workers = [
 
 const rootElem = document.querySelector('#root');
 
-  workers.forEach(({id, first_name, last_name, age, rate, days, photo}) => {
+  workers.forEach(({id, first_name, last_name, age, rate, days, photo, progress}) => {
     const card = document.createElement('div');
     const idElem = document.createElement('p');
     const nameElem = document.createElement('p');
     const ageElem = document.createElement('p');
     const salaryElem = document.createElement('p');
     const photoElem = document.createElement('img');
-    //const progressElem = document.createElement('p');
+    const progressContainer = document.createElement('div');
+    const progressLine = document.createElement('div');
+    const progressValue = document.createElement('p');
+
+
 
   
     idElem.innerText = `ID: ${id}`;
     nameElem.innerText = `Name: ${first_name} ${last_name}`;
     ageElem.innerText = `Age: ${age}`;
     salaryElem.innerText = `Salary: ${rate * days}`;
+    progressValue.innerText = progress + '%';
     //progressElem.innerText = `Progress: ${progress}%`;
     
     
     card.classList.add('card');
 
+    progressContainer.classList.add('progress-container');
+
+    progressLine.classList.add('progress-line');
+
+    progressLine.style.width = progress + '%';
+
+    //progressLine.style.backgroundColor = progress >= 50 ? 'green' : 'red';
+
+    //progress >= 50 ? progressLine.style.backgroundColor = 'green' : progressLine.style.backgroundColor = 'red';
+
+    if (progress <= 20) {
+        progressLine.style.backgroundColor = 'red'
+    } else if (progress <= 50){ 
+        progressLine.style.backgroundColor = 'yellow'
+    }else{
+        progressLine.style.backgroundColor = 'green'
+    }
+
+
+
     photoElem.setAttribute('src', photo);
 
     photoElem.setAttribute('alt', 'photo');
 
+    progressValue.classList.add('progress-value');
+    
+
+
+    progressContainer.append(progressLine, progressValue);
   
-    card.append(idElem, nameElem, ageElem, salaryElem, photoElem);
+    card.append(idElem, nameElem, ageElem, salaryElem, photoElem, progressContainer);
     rootElem.append(card);
     
   })
