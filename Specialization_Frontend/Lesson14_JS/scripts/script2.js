@@ -18,6 +18,12 @@ const data = [
     }
   ];
 
+  // const {id, title, price} = product; // деструктуризация
+
+  // const id = product.id
+  // const title = product.title
+  // const price = product.price
+
   const rootElem = document.querySelector('.root');
 
   data.forEach(({id, title, price}) => {
