@@ -1,0 +1,21 @@
+.black_mode{
+    background-color: black;
+}
+
+.img_slider{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.change_size{
+    width: 30px;
+    height: 30px;
+    transition-duration: 250ms;
+}
+
+.img_slider1{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
