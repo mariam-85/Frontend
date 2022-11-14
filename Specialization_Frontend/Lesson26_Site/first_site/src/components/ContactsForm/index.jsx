@@ -7,23 +7,23 @@ export default function ContactsForm() {
 
             <div className={style.firstname_lastname}>
         <label>
-            <p>Name</p>
-            <input type="text"  name='firstname' placeholder='Ivan'/>
+            <p>Имя</p>
+            <input type="text"  name='Имя' placeholder='Иван'/>
         </label>
 
         <label>
-            <p>Family name</p>
-            <input type="text"  name='lastname' placeholder='Ivanov'/>
+            <p>Фамилия</p>
+            <input type="text"  name='Фамилия' placeholder='Иванов'/>
         </label>
         </div>
 
         <label>
-            <p>Message</p>
-            <textarea type="text"  name='message' placeholder='Your message'/>
+            <p>Сообщение</p>
+            <textarea type="text"  name='Сообщение' placeholder='Ваше сообщение'/>
 
         </label>
 
-        <button>Send message</button>
+        <button>Отправить сообщение</button>
     </form>
     )
     }
