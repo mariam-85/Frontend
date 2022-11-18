@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import style from './index.module.css'
+import Select from 'react-select'
+import { Context } from '../../context';
+
 
 export default function AddUserForm() {
 
+  const { teams } = useContext(Context);
+
     const submit_form = event => {
         event.preventDefault();
-        const { user_title } = event.target;
-        console.log(user_title.value);
-        user_title.value = '';
+        const { name, team } = event.target;
+        console.log(name.value, team.value);
+        name.value = '';
     }
+
     
       return (
+
         <form className={style.add_user_form} onSubmit={submit_form}>
             <p>Add user</p>
-            <input type="text" name='user_title' placeholder='User´s title' />
+            <input type="text" name='name' placeholder='Name' />
+            <Select options={teams} name='team' />
             <button>Add user</button>
         </form>
       )
