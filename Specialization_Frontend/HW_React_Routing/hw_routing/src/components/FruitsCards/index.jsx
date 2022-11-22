@@ -1,15 +1,18 @@
 import React from 'react'
-import style from './index.module.css'
+import { fruits } from '../../data/fruits'
+import Fruits from '../Fruits'
 
-export default function FruitsCards({ id, title, price, country }) {
-
+export default function FruitsCards() {
 
   return (
-    <div className={style.fruits_cards}>
-        <p>ID: { id }</p>
-        <p>Title: { title }</p>
-        <p>Price: { price }</p>
-        <p>Country: { country }</p>
+    <div>
+
+      {
+        fruits
+        .sort((a, b) => a.price - b.price)
+        .map(el => <Fruits {...el} key={el.id} />)
+      }
+
     </div>
   )
 }
