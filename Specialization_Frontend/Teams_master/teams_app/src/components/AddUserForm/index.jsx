@@ -6,12 +6,12 @@ import { Context } from '../../context';
 
 export default function AddUserForm() {
 
-  const { teams } = useContext(Context);
+  const { teams, addUser } = useContext(Context);
 
     const submit_form = event => {
         event.preventDefault();
         const { name, team } = event.target;
-        console.log(name.value, team.value);
+        addUser(name.value, team.value);
         name.value = '';
     }
 

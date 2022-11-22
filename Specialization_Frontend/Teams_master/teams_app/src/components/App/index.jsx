@@ -10,13 +10,25 @@ export default function App() {
 
 const [ teams, setTeams ] = useState([]);
 
+const [ users, setUsers ] = useState([]);
+
 const addTeam = (team_title) => {
   setTeams([...teams, { value: team_title, label: team_title}])
 }
 
+const addUser = (name_value, team_value) => {
+  setUsers([...users, {
+    id: Date.now(),
+    name: name_value,
+    team: team_value
+  }])
+} 
+
+console.log(users);
+
   return (
     <div>
-      <Context.Provider value={{ teams, addTeam }}>
+      <Context.Provider value={{ teams, addTeam, addUser, users }}>
      <Nav />
      <Routes>
        <Route path='/configurations_page' element={<ConfigurationsPage />} />
