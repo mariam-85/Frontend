@@ -8,7 +8,7 @@ export default function TeamsPage() {
   return (
     <div>
       {
-        users.length !== 0
+        users.length
         ? users.map(el => <User key={el.id} {...el} />)
         : 'No users'
 
