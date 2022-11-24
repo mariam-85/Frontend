@@ -14,8 +14,8 @@ export default function App() {
      <Nav />
      <Routes>
        <Route path='/home/*' element={<HomePage />} />
-       <Route path='/fruits_page' element={<FruitsPage />} />
-       <Route path='/vegetables_page' element={<VegetablesPage />} />
+       <Route path='/fruits' element={<FruitsPage />} />
+       <Route path='/vegetables' element={<VegetablesPage />} />
        <Route path='/*' element={<NotFoundPage />} />
 
      </Routes> 

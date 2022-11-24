@@ -1,11 +1,12 @@
 import React from 'react'
 import { vegetables } from '../../data/vegetables'
 import Vegetables from '../Vegetables'
+import style from './index.module.css'
 
 export default function VegetableCards() {
 
   return (
-    <div>
+    <div className={style.vegetables_cards}>
 
       {
         vegetables
