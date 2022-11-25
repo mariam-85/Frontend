@@ -26,7 +26,7 @@ export default function Post({ id, title, text, like, comments }) {
       >
         { like_or_not }
         </p>
-        <CommentsContainer comments={comments}/>
+        <CommentsContainer comments={comments} post_id={id}/>
 
     </div>
   )

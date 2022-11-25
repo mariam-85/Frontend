@@ -1,20 +1,23 @@
 import React, { useContext } from 'react'
-// import style from './index.module.css'
+import style from './index.module.css'
+import { Context } from '../../context';
 
 
-export default function AddCommentForm() {
+export default function AddCommentForm({ post_id }) {
+
+    const { add_comment } = useContext(Context);
   
     const submit = event => {
         event.preventDefault();
         const { comment } = event.target;
-        console.log(comment.value);
+        add_comment(post_id, comment.value);
         comment.value = '';
     }
 
 
 
   return (
-    <form onSubmit={submit}>
+    <form className={style.add_comment_form} onSubmit={submit}>
         <input type="text" name='comment' placeholder='Your comment' />
         <button>Add comment</button>
     </form>

@@ -2,7 +2,7 @@ import React from 'react'
 import Comment from '../Comment';
 import AddCommentForm from '../AddCommentForm';
 
-export default function CommentsContainer({ comments  }) {
+export default function CommentsContainer({ comments, post_id }) {
   return (
     <div>{
 
@@ -10,7 +10,7 @@ export default function CommentsContainer({ comments  }) {
 
         }
 
-        <AddCommentForm />
+        <AddCommentForm post_id={post_id}/>
     </div>
   )
 }
