@@ -30,12 +30,14 @@ export const posts_data = [
         id: 3,
         title: 'About university',
         text: 'I hate my classes!',
-        like: false
+        like: false,
+        comments: []
     },
     {
         id: 4,
         title: 'About children',
         text: 'I love my children',
-        like: true
+        like: true,
+        comments: []
     }
 ]

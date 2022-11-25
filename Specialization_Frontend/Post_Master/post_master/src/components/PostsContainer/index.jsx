@@ -11,7 +11,7 @@ export default function PostsContainer() {
         posts.map(el => <Post key={el.id} {...el} />)
 
         }
-        </div>
+    </div>
   )
 }
 

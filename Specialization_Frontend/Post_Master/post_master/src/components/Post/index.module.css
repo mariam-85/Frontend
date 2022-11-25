@@ -4,6 +4,7 @@
     padding: 15px;
     margin: 10px;
     width: 350px;
+    min-height: 80px;
 
     position: relative;
 }

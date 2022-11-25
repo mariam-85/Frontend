@@ -19,13 +19,18 @@ export default function App() {
     setPosts([...posts]);
   }
 
+    // Из собранных данных формировать новый пост
+
   const add_post = (title_value, text_value) => {
     setPosts([...posts, {
       id: Date.now(),
       title: title_value,
-      text: text_value
+      text: text_value,
+      like: false,
+      comments: []
     }])
   }
+
 
   return (
     <div>
