@@ -1,5 +1,5 @@
 import PostsContainer from "../PostsContainer";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { posts_data } from '../../data/posts'
 import { Context } from '../../context'
 import AddPostForm from "../AddPostForm";
@@ -7,6 +7,16 @@ import AddPostForm from "../AddPostForm";
 export default function App() {
 
   const [ posts, setPosts ] = useState(posts_data);
+
+  useEffect(() => {
+    const res = JSON.parse(localStorage.getItem('posts'));
+    setPosts(res)
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('posts', JSON.stringify(posts))
+  }, [posts]);
+
 
   const change_like = (id) => {
     // Найти карточку по айди - метод find()
