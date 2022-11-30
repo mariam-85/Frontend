@@ -5,6 +5,7 @@ import style from './index.module.css'
 export default function Nav() {
   return (
     <div className={style.nav_menu}>
+        <Link to ='/'>Home</Link>
         <Link to ='/users'>Users</Link>
         <Link to='/products'>Products</Link>
     </div>
