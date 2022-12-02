@@ -1,3 +1,4 @@
+import '../../style.css'
 import { useState, useEffect } from 'react'
 import { Context } from '../../context'
 import { getProducts } from '../../requests/products';
@@ -20,11 +21,12 @@ export default function App() {
     getUsers(setUsers)
   }, []);
 
-  console.log(products);
+  const createNewProduct = product => setProducts(prev => [...prev, product]);
+
 
   return (
     <div>
-  <Context.Provider value={{ products, users }}>
+  <Context.Provider value={{ products, users, createNewProduct }}>
   <Routes>
        <Route path='/' element={<MainPage />} />
        <Route path='/users' element={<UsersPage />} />

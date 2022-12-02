@@ -6,7 +6,7 @@ export default function UsersPage() {
   return (
     <div>
         <Link to='/'>
-        <button className={'style_button'}>Main Page</button>
+        <button className='style_button'>Main Page</button>
         </Link>
         <UsersContainer />
     </div>

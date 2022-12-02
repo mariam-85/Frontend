@@ -8,7 +8,7 @@ export default function User({ id, name, role, email, avatar }) {
       <p>Name: { name }</p>
       <p>Role: { role }</p>
       <p>Email: { email }</p>
-      <img src={ avatar } alt= 'User photo'/>
+      <img src={ avatar } alt= 'User'/>
     </div>
   )
 }
