@@ -36,8 +36,3 @@ export default function AddProductForm() {
   )
 }
 
-
-// GET - получить информацию
-// POST - добавить информацию
-// PUT - изменить информацию
-// DELETE - удалить информацию

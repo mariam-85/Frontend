@@ -23,10 +23,13 @@ export default function App() {
 
   const createNewProduct = product => setProducts(prev => [...prev, product]);
 
+  const createNewUser = user => setUsers(prev => [...prev, user]);
+
+
 
   return (
     <div>
-  <Context.Provider value={{ products, users, createNewProduct }}>
+  <Context.Provider value={{ products, users, createNewProduct, createNewUser }}>
   <Routes>
        <Route path='/' element={<MainPage />} />
        <Route path='/users' element={<UsersPage />} />
