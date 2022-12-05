@@ -11,6 +11,10 @@ export default function MainPage() {
         <Link to='/users'>
         <button className='style_button'>Users</button>
         </Link>
+
+        <Link to='/todos'>
+        <button className='style_button'>To do list</button>
+        </Link>
     </div>
   )
 }

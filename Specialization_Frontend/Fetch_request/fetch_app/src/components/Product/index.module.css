@@ -3,3 +3,21 @@
     border-radius: 15px;
     padding: 10px;
 }
+
+.product_card img {
+    max-width: 200px;
+  }
+  
+  .slider {
+    max-width: 200px;
+  }
+  
+  .prev_btn {
+    background-color: red;
+  }
+  
+  .slider_block {
+    display: flex;
+    justify-content: center;
+  }
+
