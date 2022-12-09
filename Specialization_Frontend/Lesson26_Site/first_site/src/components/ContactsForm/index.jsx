@@ -4,11 +4,19 @@ import { useForm } from 'react-hook-form'
 
 export default function ContactsForm() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
-        mode: 'onBlur'
-    });
+    const { register,  handleSubmit, formState: { errors }, reset } = useForm({
+        mode: 'onBlur',
+        defaultValues: {
+        firstname: '',
+        lastname: '',
+        message: ''
+        }
+  });
 
-    const submit = data => console.log(data);
+    const submit = data => {
+        console.log(data);
+        reset();
+    }
 
     const firstnameRegister = register('firstname', {
         required: '*The field "firstname" is required'
@@ -25,7 +33,7 @@ export default function ContactsForm() {
 
   return (
       <div>
-    <form onSubmit={handleSubmit(submit)} className={style.contacts_form}>
+    <form onSubmit={handleSubmit(submit)} className={style.contacts_form} >
 
             <div className={style.firstname_lastname}>
         <label>
@@ -33,8 +41,10 @@ export default function ContactsForm() {
             <input 
              type="text"  
              name='Имя' 
-             placeholder='Иван' 
+             placeholder='Иван'
              {...firstnameRegister}/>
+    
+
         </label>
 
         <label>
@@ -53,8 +63,7 @@ export default function ContactsForm() {
             type="text"  
             name='Сообщение' 
             placeholder='Ваше сообщение' 
-            {...messageRegister}/>
-
+            {...messageRegister} />
         </label>
 
         <button>Отправить сообщение</button>
@@ -63,7 +72,6 @@ export default function ContactsForm() {
 {errors.firstname && <p>{errors.firstname?.message}</p>}
 {errors.lastname && <p>{errors.lastname?.message}</p>}
 {errors.message && <p>{errors.message?.message}</p>}
-
  </div>
 </div>
     )
