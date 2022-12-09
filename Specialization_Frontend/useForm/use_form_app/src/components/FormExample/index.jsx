@@ -4,9 +4,12 @@ import style from './index.module.css'
 
 export default function FormExample() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-  const submit = data => console.log(data);
+  const submit = data => {
+    console.log(data);
+    reset();
+  }
 
  const emailRegister = register('email', {
    required: '*The field "email" is required',
@@ -40,7 +43,7 @@ export default function FormExample() {
           {...passwordRegister} />
         <button>Send</button>
     </form>
-         <div className={style.error_message}>
+     <div className={style.error_message}>
           {errors.email && <p>{errors.email?.message}</p>}
           {errors.password && <p>{errors.password?.message}</p>}
      </div>
