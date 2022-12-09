@@ -11,42 +11,46 @@ export default function FormExample() {
     reset();
   }
 
- const emailRegister = register('email', {
-   required: '*The field "email" is required',
-   pattern: {
-    value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-    message: '*Not valid email-format'
-  }
- });
- const passwordRegister = register('password', {
-   required: '*The field "password" is required',
-   pattern: {
-     value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-     message: '*Password should contain minimum eight characters, at least one letter, one number and one special character'
-   }
- });
+  const emailRegister = register('email', {
+    required: '*The field "email" is required',
+    pattern: {
+      value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+      message: '*Not valid email-format'
+    }
+  });
 
+  const passwordRegister = register('password', {
+    required: '*The field "password" is required',
+    pattern: {
+      value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+      message: '*Password should contain minimum eight characters, at least one letter, one number and one special character'
+    }
+  });
 
   return (
-
-  <div>
-    <form onSubmit={handleSubmit(submit)}>
+    <div>
+      <form onSubmit={handleSubmit(submit)}>
         <input 
-          type="text" 
+          type='text' 
           name='email' 
           placeholder='Email' 
-          {...emailRegister} />
+          {...emailRegister} 
+        />
+        
         <input 
-          type="password" 
+          type='password' 
           name='password' 
           placeholder='Password' 
-          {...passwordRegister} />
+          {...passwordRegister} 
+        />
+
         <button>Send</button>
-    </form>
-     <div className={style.error_message}>
-          {errors.email && <p>{errors.email?.message}</p>}
-          {errors.password && <p>{errors.password?.message}</p>}
-     </div>
-  </div>
+      </form>
+
+      <div className={style.error_message}>
+        {errors.email && <p>{errors.email?.message}</p>}
+        {errors.password && <p>{errors.password?.message}</p>}
+      </div>
+    </div>
   )
 }

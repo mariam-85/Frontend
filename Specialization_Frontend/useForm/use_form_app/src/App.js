@@ -1,10 +1,10 @@
-import FormExample from "./components/FormExample";
+import FormItem from "./components/FormItem";
 
 
 export default function App() {
   return (
     <div>
-      <FormExample />
+      <FormItem />
     </div>
   );
 }
