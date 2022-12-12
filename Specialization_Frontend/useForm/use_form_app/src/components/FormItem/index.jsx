@@ -3,11 +3,11 @@ import Button from '../Button'
 import Input from '../Input'
 import { useForm } from 'react-hook-form'
 import style from './index.module.css'
-import { CloseOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 
 
-export default function FormItem() {
 
+export default function FormItem( {title, button, form_type, info_text, info_text_2, link_url} ) {
 
     const { register, handleSubmit } = useForm();
 
@@ -16,31 +16,45 @@ export default function FormItem() {
     const emailRegister = register('email');
     const passwordRegister = register('password');
 
-
-    console.log(emailRegister);
-
-
-
   return (
 
     <form onSubmit={handleSubmit(submit)} className={style.item_style}>
-        <CloseOutlined className={style.cross_icon}/>
-        <p className={style.text}>Registration</p>
+        <p className={style.text}>{ title }</p>
+        <p className={style.text_text}>{ info_text_2 }</p>
+
         <Input 
         type="text" 
         name='email' 
         placeholder='Email'
-        {...emailRegister} />
+        {...emailRegister} 
+        />
 
-        <Input 
-        type="password" 
-        name='password' 
-        placeholder='Password'
-        {...passwordRegister} />
+        {
+            ['registration', 'login'].includes(form_type)
+            ? <Input 
+                type="password" 
+                name='password' 
+                placeholder='Password'
+                {...passwordRegister} 
+                />
+                : ''
+        }
 
-        <p className={style.text_text}>By registering on the site, you agree to our Rules and Privacy Policy and agree to receive newsletters.</p>
-        <Button color='yellow'>Registration</Button>
-        <Button color='white'>Login</Button>
+        
+        <p className={style.text_text}>{ info_text }</p>
+        <Button color='yellow'>{ button.submit }</Button>
+
+        {
+            ['registration', 'login'].includes(form_type)
+            ? <Link to={link_url} style={{textDecoration: 'none'}}>
+            <Button color='white'>{button.redirect}
+            </Button>
+            </Link>
+            : ''
+        }
+
+        {/* {button.redirect && <Button color="white">{button.redirect}</Button>} */}
+
 
     </form>
   )

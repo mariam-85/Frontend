@@ -6,8 +6,6 @@
 
 .item_style{
     width: 420px;
-    border: 1px solid black;
-    border-radius: 20px;
     padding: 32px;
     position: relative;
 }
@@ -28,10 +26,4 @@
     width: 100%;
   }
 
-  .cross_icon{
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      font-size: 24px;
-      cursor: pointer;
-  }
+  

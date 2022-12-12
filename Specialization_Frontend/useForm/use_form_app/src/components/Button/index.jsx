@@ -15,10 +15,12 @@
 import React from 'react'
 import style from './index.module.css'
 
-export default function Button({ children, color }) {
+export default function Button({ children, color, ...props}) {
 
   return (
-    <button className={[style.button, style[color]].join(' ')}>
+    <button className={[style.button, style[color]].join(' ')}
+      { ...props } 
+      >
       { children }
     </button>
   )
