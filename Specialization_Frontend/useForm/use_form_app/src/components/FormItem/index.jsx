@@ -41,7 +41,17 @@ export default function FormItem( {title, button, form_type, info_text, info_tex
         }
 
         
-        <p className={style.text_text}>{ info_text }</p>
+        {
+            form_type === 'login'
+            ? <Link to='/reset_password_form' style={{ textDecoration:
+            'none'}}>
+            <p className={[style.text_text, style.text_text_link].join(' ')}>{ info_text }</p>
+            </Link>
+            : <p className={style.text_text}>{ info_text }</p>
+
+        }
+        
+
         <Button color='yellow'>{ button.submit }</Button>
 
         {
