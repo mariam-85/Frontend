@@ -7,7 +7,7 @@ export default function UsersPage() {
   return (
     <div>
         <Link to='/'>
-        <button className='style_button'>Main</button>
+        {/* <button className='style_button'>Main</button> */}
         </Link>
 
         <AddUserForm />

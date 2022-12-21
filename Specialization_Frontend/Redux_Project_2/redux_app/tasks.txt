@@ -12,3 +12,10 @@
 13. Создать компонент User  - три параграфа
 14. Из state сформировать карточки внутри UsersContainer
 15. UsersContainer импортиовать в UsersPage
+...
+16. Создать компонент AddPostsForm с двумя инпутами: title и description.
+17. Научить форму собирать введенные данные и выводить их в консоль в формате объекта
+18. Создать компонент PostsContainer
+19. Создать postReducer, добавить его в rootReducer
+20. Создать action addPost, прописать для него логику в postReducer
+21. Импортировать addPost в компонент формы, вызвать его через dispatch
