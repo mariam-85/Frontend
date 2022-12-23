@@ -1,5 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import { getCategories } from '../../requests/categories'
+import CategoryCard from '../../components/CategoryCard';
+import style from './index.module.css'
 
 export default function Categories() {
 
@@ -9,9 +11,11 @@ export default function Categories() {
     getCategories(setCategories)
   }, []);
 
-  console.log(categories);
-
   return (
-    <div>Category</div>
+    <div className={style.categories}>
+      {
+      categories.map(el => <CategoryCard key={el} category={el} />)
+      }
+    </div>
   )
 }

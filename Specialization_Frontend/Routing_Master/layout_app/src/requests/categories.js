@@ -3,3 +3,4 @@ export const getCategories = callback => {
       .then(resp => resp.json())
       .then(json => callback(json))
   }
+
