@@ -1,0 +1,14 @@
+.products {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+
+  .category{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 72px;
+    text-align: center;
+    margin: 50px;
+  }
