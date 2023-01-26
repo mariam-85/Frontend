@@ -1,0 +1,104 @@
+.footer{
+    width: 1548px;
+    height: 175px;
+   
+}
+
+
+.contacts_block{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.phone{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-style: normal;
+    color: #000000;
+}
+
+.phone p{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+.phone h2{
+    width: 600px;
+    height: 91px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.messangers{
+    display: flex;
+    justify-content:start;
+    gap: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 130%;
+
+    color: #000000;
+}
+
+.city_name{
+    width: 536px;
+    height: 104px;
+   
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+.city_name h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+
+}
+
+
+.mode{
+    width: 141px;
+    height: 23px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.hours{
+    width: 193px;
+    height: 31px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+}
+
+
+
+
+
+
+
