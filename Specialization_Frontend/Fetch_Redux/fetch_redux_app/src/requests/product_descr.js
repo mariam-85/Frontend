@@ -7,3 +7,4 @@ export const load_product = id => {
     .then(json => dispatch(loadProduct(json)))
   }
 }
+

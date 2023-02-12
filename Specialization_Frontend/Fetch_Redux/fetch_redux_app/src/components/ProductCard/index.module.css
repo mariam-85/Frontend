@@ -46,15 +46,8 @@
   .product_card a {
     text-decoration: none;
     color: black;
-    margin:10px;
-    font-weight: 600;
   }
   
   .product_card a:hover {
     color: #a20000;
-  }
-
-  .product_card p {
-    
-    font-weight: 600;
   }
