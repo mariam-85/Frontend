@@ -7,43 +7,33 @@ import icon_2 from './media/Icon_2.png';
 export default function Footer() {
 
   return (
-    <footer className={style.footer}>
+    <footer className={['wrapper', style.main_footer].join(' ')}>
 
-      <section className={style.contacts}>
+      <div className={style.footer}>
 
         <div className={style.contacts_block}>
-          <div className={style.contact}>
-                  <div className={style.phone}>
                     <p>Contacts</p>
                     <h2>+ 7 999 999 99 99</h2>
-                  </div>
-                        <div className={style.messangers}>
-                          <div className={style.instagram}>
+                        <div className={style.messengers}>
+                          <a href='"https://www.instagram.com/"'>
                           <img src={icon_1} alt="icon" />
-                          <p>Instagram</p>
-                          </div>
-                          <div className={style.whatsapp}>
+                          </a>
+                          <a href="https://www.whatsapp.com/">
                           <img src={icon_2} alt="icon" />
-                          <p>WhatsApp</p>
+                        </a>
                         </div>
-          </div>
         </div>
 
           <div className={style.address}>
-            <h2>Address</h2>
-            <div className={style.city_name}>
+            <p className={style.adr}>Address</p>
             <h2>Cosmonaut City</h2>
-            <p>Cosmonauts Passage</p>
-            </div>
-            <div className={style.working_mode}>
+            <h2>Cosmonauts Passage</h2>
             <p className={style.mode}>Working mode</p>
             <p className={style.hours}>24 hours a day</p>
             </div>
-          </div>
 
         </div>
-      </section>
-
+          
     </footer>
   )
 }

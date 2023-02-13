@@ -1,35 +1,21 @@
 import React from 'react'
-import image from './media/image 2.png'
-import rectangle from './media/Rectangle 1.png'
 import style from './index.module.css'
 
 export default function SeasonSaleBlock
 () {
   return (
-    <div>
+    <section className={style.section}>
 
         <div className={['wrapper', style.sale_block].join(' ')}>   
-            {/* <img src={rectangle} alt="rectangle" /> */}
-
-            <div className={style.info_block}>
-            <img src={image} alt="flowers" className={style.pic}/>
-            <p>New season sale</p>
+            
+            <p className={style.season}>New season</p> 
+            <p className={style.sale}>sale</p>
+            <div>
+            <button className={style.promotions}>Promotions</button>
+            <button className={style.more}>Learn more</button>
             </div>
             
         </div>
-
-        <div>
-            <p>Categories</p>
-        </div>
-
-        <div>
-            <p>Discount 5% on first order</p>
-        </div>
-
-        <div>
-            <p>Promotions</p>
-        </div>
-
-    </div>
+    </section>
   )
 }

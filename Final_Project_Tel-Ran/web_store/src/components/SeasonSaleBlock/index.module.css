@@ -1,18 +1,90 @@
-.sale_block{
+.section{
+    background-color: #A1E2EB;
+    min-height: 600px;
+    margin-top: 76px;
+    background-image: url('./media/image 2.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: -50px;
+    padding-top: 100px;
+}
+
+.season{
     position: absolute;
-    width: 2669px;
-    height: 600px;
-    left: 0px;
-    top: 167px;
-
-    background: #A1E2EB;
+    width: 540px;
+    height: 104px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 10px;
+    margin-left: 10px;
 }
 
-.pic{
-    
-position: absolute;
-left: 1000px;
-top: -60px;
-
-
+.sale{
+    position: absolute;
+    width: 756px;
+    height: 82px;
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 100px;
+    margin-left: 10px;
 }
+
+.promotions{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 25px 50px;
+    gap: 10px;
+    position: absolute;
+    width: 241px;
+    height: 82px;
+    background: transparent;
+    border-radius: 13px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 130%;
+    cursor: pointer;
+}
+.promotions:hover{
+    background: #FFFFFF;
+    border-radius: 13px;
+    color: #2D2D2D;
+}
+
+.more{
+    margin-top: 200px;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 25px 50px;
+    gap: 10px;
+    position: absolute;
+    width: 241px;
+    height: 82px;
+    background: transparent;
+    border-radius: 13px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.more:hover{
+    background: #FFFFFF;
+    border-radius: 13px;
+    color: #2D2D2D;
+}
+
+
+

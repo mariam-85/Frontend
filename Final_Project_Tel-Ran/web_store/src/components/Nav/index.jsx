@@ -1,38 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import style from './index.module.css'
-import logo from './media/image 1.png'
-import logo_2 from './media/Vector.png'
+import cart from './media/cart_pic.png'
+
 
 export default function Nav() {
   return (
 
-    <nav className={['wrapper', style.nav_block].join(' ')}>
+    <nav className={style.header_nav}>
+        <ul>
 
-       
-            <a href='/'>
-                <img src={logo} alt="logo" className={style.logo}/>
-            </a>
-       
-            <Link to="categories/:category">
-                <button className={style.button}>Catalogue</button>
-            </Link>
-
-
-        <ul className={['wrapper', style.nav_menu].join(' ')}>
-            <Link to="categories">
+            <Link to="categories" className={style.link}>
             <li>Categories</li>
             </Link>
-            <li>Coupon</li>
-            <li>Promotions</li>
-            <li>Contact</li> 
+            <li>Coupon</li> 
+            <li>Promotions</li> 
+            <li>Contact</li>  
             <Link to="cart/">          
-            <li><img src={logo_2} alt="logo" className={style.logo_2}/></li>
+            <img src={cart} alt="logo" className={style.cart}/>
             </Link> 
-        </ul>
-
+            </ul>
     </nav>
 
   )
 }
+
 
