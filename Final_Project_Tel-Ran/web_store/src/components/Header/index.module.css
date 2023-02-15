@@ -1,10 +1,47 @@
+.container_logo_btn {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_logo_btn button {
+    background-color: #339933;
+    border: 2px solid #339933;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 39px;
+    width: 129px;
+    height: 49px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+.container_logo_btn img {
+    width: 72px;
+    height: 72px;
+    margin-top: 19px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 167px;
+}
+
+
+
+
 /* .main_header {
     display: flex;
     justify-content: space-around;
     align-items: center;
 } */
 
-.header{
+/* //////////////// */
+
+/* .header{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,10 +58,10 @@
 
 .logo_btn img{
     padding: 20px;
-}
+} */
 
 
-
+/* //////////// */
 
 
 
@@ -40,4 +77,5 @@
     grid-column: nav_start / nav_end;
     justify-self: end;
 } */
+
 
