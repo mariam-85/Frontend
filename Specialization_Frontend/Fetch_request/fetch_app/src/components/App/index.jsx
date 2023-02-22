@@ -27,20 +27,20 @@ export default function App() {
     getToDo(setToDo)
   }, []);
 
-  useEffect(() => {
-    const products = JSON.parse(localStorage.getItem('products'));
-    const users = JSON.parse(localStorage.getItem('users'));
-    const todos = JSON.parse(localStorage.getItem('todos'));
-    if (products) setProducts(products);
-    if (users) setUsers(users);
-    if (todos) setToDo(todos);
-  }, []);
+  // useEffect(() => {
+  //   const products = JSON.parse(localStorage.getItem('products'));
+  //   const users = JSON.parse(localStorage.getItem('users'));
+  //   const todos = JSON.parse(localStorage.getItem('todos'));
+  //   if (products) setProducts(products);
+  //   if (users) setUsers(users);
+  //   if (todos) setToDo(todos);
+  // }, []);
   
-  useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(products));
-    localStorage.setItem('users', JSON.stringify(users));
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [products, users, todos]);
+  // useEffect(() => {
+  //   localStorage.setItem('products', JSON.stringify(products));
+  //   localStorage.setItem('users', JSON.stringify(users));
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // }, [products, users, todos]);
 
 
   const createNewProduct = product => setProducts(prev => [...prev, product]);

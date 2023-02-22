@@ -24,7 +24,7 @@ export default function App() {
     <div>
 
       {
-        users.map(el => <User {...el} />)
+        users.map(el => <User {...el} key={el.id}/>)
       }
 
     </div>

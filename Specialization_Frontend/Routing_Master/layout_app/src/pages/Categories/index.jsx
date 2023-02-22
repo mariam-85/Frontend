@@ -13,9 +13,15 @@ export default function Categories() {
 
   return (
     <div className={style.categories}>
+    {
+    categories.length === 0 
+    ? <p>Categories are loading...</p>
+    : <div >
       {
       categories.map(el => <CategoryCard key={el} category={el} />)
       }
+    </div>
+}
     </div>
   )
 }

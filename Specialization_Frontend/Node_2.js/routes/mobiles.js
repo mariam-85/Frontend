@@ -1,23 +1,31 @@
-import { Router } from "express";
+import { Router } from "express"; // ипорт функции Router из express
+// const { Router } = require('express');
 
-import mobilesList from '../data/mobiles.js'
+import { mobilesList } from "../data/mobilesList.js";
 
-const router = Router();
+const router = Router(); // создаем экземпляр роута
 
-  router.get('/mobiles', (req, res) => {
-      const { quantity } = req.query;
+router.get('/', (req, res) => {
+  const { quantity } = req.query;
+  const parsedQuantity = parseInt(quantity);
+  if(!isNaN(parsedQuantity)) {
+    const filteredMobilesList = mobilesList.filter(el => el.quantity >= parsedQuantity);
+    res.send(filteredMobilesList)
+  } else {
     res.send(mobilesList)
-  });
+  }
+});
 
-  router.get('/mobiles/:id', (req, res) => {
-    const { id } = req.params;
-    const mobilesItem = mobilesList.find(el => el.id === +id)
-    res.send(mobilesItem);
-  });
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const mobileItem = mobilesList.find(el => el.id === +id);
+  res.send(mobileItem)
+});
 
-  router.post('/mobiles', (req, res) => {
-    mobilesList.push(req.body);
-    res.send(201)
-  });
+router.post('/', (req, res) => {
+  mobilesList.push(req.body);
+  res.send(201)
+});
 
-  export default router;
+export default router;
+// module.exprots = router;

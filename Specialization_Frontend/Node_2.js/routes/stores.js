@@ -1,22 +1,29 @@
 import { Router } from "express";
+// const { Router } = require('express');
 
-import storesList from '../data/stores'
+import { storesList } from "../data/storesList.js";
 
 const router = Router();
 
-router.get('/stores', (req, res) => {
-    res.send(storesList)
-  });
+router.get(
+  '/',
+  (req, res, next) => {
+    console.log('before getting storeList');
+    next()
+  }, 
+  (req, res, next) => {
+    console.log('getting storeList')
+    res.send(storesList);
+    next()
+  },
+  () => console.log('got storeList')
+);
 
-  router.get('/stores/:id', (req, res) => {
-    const { id } = req.params;
-    const storesItem = storesList.find(el => el.id === +id)
-    res.send(storesItem);
-  });
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const storeItem = storesList.find(el => el.id === +id);
+  res.send(storeItem);
+});
 
-  router.post('/stores', (req, res) => {
-    storesList.push(req.body);
-    res.send(201)
-  });
-
-  export default router;
+export default router;
+// module.exports = router;

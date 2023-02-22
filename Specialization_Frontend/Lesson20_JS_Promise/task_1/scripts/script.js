@@ -27,7 +27,6 @@ fetch('https://reqres.in/api/users') // отправляем запрос
           card.classList.add('card');
 
 
-
           card.append(avatarElem, firstnameElem, emailElem);
           cards_container.append(card);
 

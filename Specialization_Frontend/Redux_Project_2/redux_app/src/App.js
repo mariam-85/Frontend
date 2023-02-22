@@ -3,7 +3,7 @@ import PostsPage from './pages/PostsPage';
 import MainPage from './pages/MainPage';
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout';
-// import './style.css'
+import './style.css'
 
 export default function App() {
 

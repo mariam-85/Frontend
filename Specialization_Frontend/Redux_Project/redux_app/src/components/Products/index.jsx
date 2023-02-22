@@ -34,9 +34,7 @@ export default function Products() {
 
         <div className={style.products_card}> 
             {
-
                 state.map(el => <ProductItem key={el.id} {...el} delete_product={delete_product} /> )
-
 
             }
             </div>

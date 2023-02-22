@@ -17,7 +17,6 @@ export default function App() {
        <Route path='/fruits' element={<FruitsPage />} />
        <Route path='/vegetables' element={<VegetablesPage />} />
        <Route path='/*' element={<NotFoundPage />} />
-
      </Routes> 
     </div>
   );

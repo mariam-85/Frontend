@@ -16,13 +16,18 @@ export default function Products() {
         getProducts(category, setProducts)
       }, []);
 
-console.log(products);
-
   return (
+
     <div className={style.products}>
         {
-        products.map(el => <Product key={el.id} {...el} />)
-      }
+            products.length === 0
+            ? <p>{ category } are loading...</p>
+            : <div>
+            {
+                products.map(el => <Product key={el.id} {...el} />)
+            }
+              </div>
+        }
     </div>
-  )
+    )
 }

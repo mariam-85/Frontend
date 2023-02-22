@@ -1,4 +1,3 @@
-//const cards_container = document.querySelector('.cards_container');
 
 const tasks_container = document.querySelector('#tasks_container');
 
