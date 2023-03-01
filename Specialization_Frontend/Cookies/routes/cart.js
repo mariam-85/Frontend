@@ -21,6 +21,7 @@ router.post('/item', (req, res) => {
       items: [cartItem]
     }
   }
+  console.log(req.session);
   console.log(req.sessionID);
   res.send(201)
 });

@@ -4,6 +4,9 @@ import session from 'express-session';
 import goodsRouter from './routes/goods.js';
 import shopsRouter from './routes/shops.js';
 import cartRouter from './routes/cart.js'
+import authRouter from './routes/auth.js'
+import './database/index.js'
+
 
 const app = express();
 
@@ -20,5 +23,7 @@ app.use(session({
 app.use('/goods', goodsRouter);
 app.use('/shops', shopsRouter);
 app.use('/cart', cartRouter);
+app.use('/auth', authRouter);
+
 
 app.listen(PORT, () =>console.log(`Server started on port ${PORT}`));
