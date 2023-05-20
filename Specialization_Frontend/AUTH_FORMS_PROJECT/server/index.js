@@ -13,12 +13,13 @@ const PORT = 2001;
 app.use(express.json());
 app.use(session({
   secret: "DKFJURNVH",
-  resave: false,
+  resave: true,
   saveUninitialized: false
 }));
 
 app.use(cors({
-    origin: '*'
+    origin: 'http://localhost:3004', //ukazivaem spisok doverennih domenov
+    credentials: true //vkluchaem podderzhku kukov
 }));
 
 app.use('/auth', authRouter);

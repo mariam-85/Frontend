@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function ProductCard() {
+export default function ProductCard({ id, mobile, color, quantity }) {
   return (
-    <div>ProductCard</div>
+    <div>
+        <p> Title: { mobile } </p>
+        <p> Color: { color } </p>
+        <p> Quantity: { quantity } </p>
+    </div>
   )
 }
